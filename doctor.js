@@ -18,9 +18,9 @@ app
     // Static content
     .use(express.static(html))
     // Default route
-    .use(function(req, res) {
-      res.sendFile(html + 'index.html');
-    })
+    // .use(function(req, res) {
+    //   res.sendFile(html + 'index.html');
+    // })
     // Start server
     .listen(port, function () {
         console.log('Port: ' + port);
