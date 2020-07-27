@@ -11,7 +11,7 @@ const bodyParser = require('body-parser');
 const compression = require('compression');
 const express = require('express');
 var app = express();
-app.use(express.static(path.join(__dirname, "public/doctor/")));
+app.use(express.static(path.join(__dirname, "public/doctor")));
 app
     .use(compression())
     .use(bodyParser.json())
