@@ -4,7 +4,6 @@ Put content of angular2 build into 'public' folder.
 // const html = __dirname + '/public/doctor/';
 
 const port = 4000;
-const apiUrl = '/api';
 var path = require('path')
 // Express
 const bodyParser = require('body-parser');
