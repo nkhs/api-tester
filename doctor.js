@@ -25,3 +25,20 @@ app
         console.log('Port: ' + port);
         // console.log('Html: ' + html);
     });
+
+var app2 = express();
+app2.use(express.static(path.join(__dirname, "public/build")));
+app2
+    .use(compression())
+    .use(bodyParser.json())
+    // Static content
+    // .use(express.static(html))
+    // // Default route
+    // .use(function(req, res) {
+    //   res.sendFile(html + 'index.html');
+    // })
+    // Start server
+    .listen(7000, function () {
+        console.log('Port: ' + port);
+        // console.log('Html: ' + html);
+    });
