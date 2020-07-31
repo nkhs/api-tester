@@ -32,13 +32,12 @@ app2
     .use(compression())
     .use(bodyParser.json())
     // Static content
-    // .use(express.static(html))
-    // // Default route
-    // .use(function(req, res) {
-    //   res.sendFile(html + 'index.html');
-    // })
+    // Default route
+    .use(function(req, res) {
+      res.sendFile(path.join(__dirname, "public/build/index.html"));
+    })
     // Start server
     .listen(7000, function () {
-        console.log('Port: ' + port);
+        console.log('http://127.0.0.1:' + 7000);
         // console.log('Html: ' + html);
     });
